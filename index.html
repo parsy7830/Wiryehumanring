@@ -1,92 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>나의 소개 페이지입니다.</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, "Noto Sans KR", sans-serif;
-      background: #f5f5f5;
-      color: #222;
-      line-height: 1.7;
-    }
-
-    .container {
-      max-width: 760px;
-      margin: 60px auto;
-      padding: 40px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      text-align: center;
-    }
-
-    .profile {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      margin-bottom: 10px;
-    }
-
-    .intro {
-      font-size: 18px;
-    }
-
-    .section {
-      margin-top: 35px;
-      padding-top: 25px;
-      border-top: 1px solid #ddd;
-    }
-
-    .tags span {
-      display: inline-block;
-      margin: 5px;
-      padding: 8px 14px;
-      background: #eee;
-      border-radius: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로필 | Profile</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Noto Sans KR) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
 </head>
+<body class="bg-gradient-to-br from-slate-50 via-gray-100 to-slate-200 text-slate-800 min-h-screen flex items-center justify-center p-4 sm:p-6">
 
-<body>
-  <main class="container">
-    <!-- profile.jpg 파일을 index.html과 같은 폴더에 넣으세요 -->
-    <img class="profile" src="wiryehumanring.png" alt="프로필 이미지">
+    <main class="w-full max-w-md bg-white/80 backdrop-blur-md rounded-2xl shadow-xl border border-white/60 p-8 sm:p-10 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl">
+        
+        <!-- 1. 프로필 사진 -->
+        <div class="relative mb-6">
+            <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden ring-4 ring-white shadow-md mx-auto">
+                <img 
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" 
+                    alt="프로필 사진" 
+                    class="w-full h-full object-cover"
+                    onerror="this.src='https://placehold.co/300x300/e2e8f0/475569?text=Profile'"
+                >
+            </div>
+        </div>
 
-    <!-- 아래 내용을 나의 정보로 수정하세요 -->
-    <h1>안녕하세요. 저는 박성열입니다.</h1>
-    <p class="intro">
-      오랫동안 공직에서 근무했습니다.<br>
-      요즘에는 위례 휴먼링과 남한산성에 관심이 많습니다.<br>
-      앞으로 AI를 활용해 새로운 것을 만들어보고 싶습니다.
-    </p>
+        <!-- 2. 이름 -->
+        <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-2">
+            박성열
+        </h1>
 
-    <section class="section">
-      <h2>제가 위례에 살면서 많이 하고싶은 것</h2>
-      <div class="tags">
-        <span>휴먼링 조깅</span>
-        <span>남한산성 등산</span>
-        <span>자유수영</span>
-      </div>
-    </section>
+        <!-- 3. 한 줄 소개 -->
+        <p class="text-indigo-600 font-medium text-sm sm:text-base mb-6 px-4 py-1.5 bg-indigo-50 rounded-full inline-block">
+            위례 휴먼링과 남한산성에서의 새로운 생활
+        </p>
 
-    <section class="section">
-      <h2>앞으로 해보고 싶은 일</h2>
-      <p>AI를 배우고 활용하면서 새로운 취미와 활동에 도전하고 싶습니다.</p>
-    </section>
-  </main>
+        <!-- 4. 3~4줄 짧은 자기소개 -->
+        <div class="w-full pt-4 border-t border-slate-100">
+            <p class="text-slate-600 leading-relaxed text-sm sm:text-base text-center break-keep">
+                위례 신도시에 위치한 휴먼링은 신도시 시민들의 삶의 형태를 바꾸고 건강한 삶을 유지할 수 있는 기틀이 되고 있습니다.
+            </p>
+        </div>
+
+    </main>
+
 </body>
-
 </html>
